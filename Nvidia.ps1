@@ -1,3 +1,4 @@
+# Nvidia
 # Disable services
 # Отключить службы
 Get-Service -ServiceName NvTelemetryContainer | Stop-Service
@@ -20,3 +21,20 @@ Get-ChildItem -Path "${env:ProgramFiles}\NVIDIA Corporation\Installer2" | Remove
 # Turn off Ansel
 # Отключить Ansel
 Start-Process -FilePath "$env:ProgramFiles\NVIDIA Corporation\Ansel\Tools\NvCameraEnable.exe" -ArgumentList off
+
+# Intel
+# Stop processes
+# Остановить процессы
+Stop-Process -Name igfx* -Force -ErrorAction SilentlyContinue
+# Disable services
+# Отключить службы
+$services = @(
+	"cphs",
+	"cplspcon",
+	"igfx*"
+)
+Get-Service -Name $services -ErrorAction SilentlyContinue | Stop-Service -ErrorAction SilentlyContinue
+Get-Service -Name $services -ErrorAction SilentlyContinue | Set-Service -StartupType Manual -ErrorAction SilentlyContinue
+# Remove $env:SystemDrive\Intel folder
+# Удалить папку $env:SystemDrive\Intel
+Remove-Item -Path $env:SystemDrive\Intel -Recurse -Force -ErrorAction SilentlyContinue
