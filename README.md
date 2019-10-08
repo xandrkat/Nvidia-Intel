@@ -1,14 +1,13 @@
 ## Overview
-Setup Nvidia services
+Setup Nvidia & Intel services
 
 ## Features
-- Disable services
-- Stop processes
-- Remove $env:SystemDrive\Intel folder
+- Turn off services
 - Remove diagnostics tracking scheduled tasks
-- Disable Nvidia control panel
-- Clean up old Nvidia driver folder
+- Delete telemetry recovery batch files
+- Turn off Nvidia control panel
 - Turn off Ansel
+- Delete telemetry logs
 
 ## Link
 Use NVSlimmer instead of running default Nvidia installer
