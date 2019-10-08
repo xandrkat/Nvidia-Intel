@@ -8,7 +8,7 @@ Get-Service -ServiceName NvTelemetryContainer | Set-Service -StartupType Manual
 Unregister-ScheduledTask -TaskName NvProfile* -Confirm:$false
 Unregister-ScheduledTask -TaskName NvTmMon* -Confirm:$false
 Unregister-ScheduledTask -TaskName NvTmRep* -Confirm:$false
-# Delete recovery batch files
+# Delete telemetry recovery batch files
 # Удалить bat-файлы восстановления телеметрии
 Remove-Item -Path $env:SystemRoot\NvContainerRecovery.bat -Force
 Remove-Item -Path $env:SystemRoot\NvTelemetryContainerRecovery.bat -Force
