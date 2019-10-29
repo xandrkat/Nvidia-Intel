@@ -10,5 +10,6 @@ Setup Nvidia & Intel services
 - Delete telemetry logs
 
 ## Link
-Use NVSlimmer instead of running default Nvidia installer
+Use one of these apps instead of running default Nvidia installer
 - [NVSlimmer](https://forums.guru3d.com/threads/nvidia-driver-slimming-utility.423072/)
+- [NVCleanstall](https://www.techpowerup.com/download/techpowerup-nvcleanstall/)
